@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tavern Tune Trial</title>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<style>
+  body { background: #1e1e2f; color: #fff; font-family: 'Press Start 2P', monospace; text-align: center; padding: 2rem; overflow: hidden; }
+  h1 { font-size: 1.5rem; margin-bottom: 2rem; }
+  button { 
+    font-family: 'Press Start 2P', monospace; 
+    font-size: 0.8rem; 
+    margin: 1rem; 
+    padding: 1rem 2rem; 
+    border: none; 
+    border-radius: 10px; 
+    cursor: pointer; 
+    transition: all 0.2s; 
+    background: #444; 
+    color: #fff;
+  }
+  button:hover { transform: scale(1.1); background: #666; }
+  #result { margin-top: 2rem; font-size: 1rem; }
+  .flash { animation: flash 0.2s; }
+  @keyframes flash { 0% {background: #fff;} 100% {background: #444;} }
+  /* Pixel sparkle effect */
+  .sparkle {
+    position: absolute; width: 6px; height: 6px; background: #ff0; animation: sparkleAnim 0.5s linear forwards;
+  }
+  @keyframes sparkleAnim {
+    0% {opacity:1; transform:translateY(0);}
+    100% {opacity:0; transform:translateY(-30px);}
+  }
+</style>
+</head>
+<body>
+
+<h1>Welcome to the Tavern — may contain Bardcore & chaos</h1>
+
+<button id="hop">HOP (+)</button>
+<button id="malt">MALT (–)</button>
+<button id="foam">FOAM (?)</button>
+
+<div id="result"></div>
+<div id="sparkles"></div>
+
+<script src="game.js"></script>
+</body>
+</html>
